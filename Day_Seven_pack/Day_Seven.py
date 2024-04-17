@@ -1,8 +1,9 @@
 #Challenge 1 - Picking a Random Words and Checking Answers
 
 import random
+from hangman_art import logo, stages
+from hangman_words import word_list
 
-word_list = ["ardvark", "baboon", "camel"]
 list_random = random.choice(word_list)
 word_lenght = len(list_random)
 
@@ -12,75 +13,27 @@ for _ in range(len(list_random)):
 
 end_of_game = False
 lives = 6
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+
+print(logo)
+
 
 while not end_of_game:
 
     Guess = (input("Digite anything letter ")).lower()
+
+    if Guess in display:
+         print(f"You've already guessed this letter {Guess}")
+   
 
     for position in range(0, word_lenght):
         letters = list_random[position]
 
         if letters == Guess:  
             display[position] = letters
-         
-    print(f"{''.join(display)}")
-
+            if Guess in list_random:
+                print(f"you typed the letter {Guess}, right letter")
+        
+ 
     if "_" not in display:
         end_of_game = True
         print("You Win")
@@ -88,10 +41,17 @@ while not end_of_game:
     if Guess not in list_random:
         lives -= 1
         print(stages[lives])
+        print(f"The Letter {Guess}, is not in the Word")
         
         if lives == 0:
             end_of_game = True
             print("Game Over")
+            print(f"The Word is {list_random}")
+    
+
+    
+
+    print(f"{''.join(display)}")
 
 #Challenge 2 - Replacing Blanks with Guesses
 
