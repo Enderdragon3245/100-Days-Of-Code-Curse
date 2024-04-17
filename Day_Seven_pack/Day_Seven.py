@@ -4,6 +4,8 @@ import random
 from hangman_art import logo, stages
 from hangman_words import word_list
 
+
+
 list_random = random.choice(word_list)
 word_lenght = len(list_random)
 
@@ -20,6 +22,8 @@ print(logo)
 while not end_of_game:
 
     Guess = (input("Digite anything letter ")).lower()
+
+    
 
     if Guess in display:
          print(f"You've already guessed this letter {Guess}")
