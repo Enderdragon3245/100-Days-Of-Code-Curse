@@ -11,25 +11,92 @@ for _ in range(len(list_random)):
         display += "_"
 
 end_of_game = False
+lives = 6
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
 
 while not end_of_game:
 
-    Letter = (input("Digite anything letter ")).lower()
+    Guess = (input("Digite anything letter ")).lower()
 
     for position in range(0, word_lenght):
         letters = list_random[position]
 
-        if letters == Letter:  
-            display[position] = Letter  
-            
-    print(display)
+        if letters == Guess:  
+            display[position] = letters
+         
+    print(f"{''.join(display)}")
 
     if "_" not in display:
         end_of_game = True
         print("You Win")
 
+    if Guess not in list_random:
+        lives -= 1
+        print(stages[lives])
+        
+        if lives == 0:
+            end_of_game = True
+            print("Game Over")
+
 #Challenge 2 - Replacing Blanks with Guesses
 
-#Challenge 3 = Checking if the Player has Won
+#Challenge 3 - Checking if the Player has Won
+
+#Challenge 4 - Keeping Track of the Player's Lives
 
 
