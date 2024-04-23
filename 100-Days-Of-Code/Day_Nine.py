@@ -1,4 +1,5 @@
 #The Python Dictionary: Deep Dive
+from reprlib import clear
 
 Dic = {
     "Key": "Value to the key",
