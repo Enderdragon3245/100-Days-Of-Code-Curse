@@ -1,27 +1,33 @@
-#Blackjack Program Requirements and Game Rules
 import random
 
-cards = [11, 2, 3, 4, 5, 6 , 7 ,8 ,9 ,10 ,10 ,10 ,10]
-Play = input("You wanna play Black Jack? 'yes' or 'no' ")
+your_cards = []
+Computer_cards = []
+current_score = 0
 
-Should_Play = None
-if Play == "yes":
-    Should_Play = True
-else:
-    Should_Play = False
+def deal_card():
+    cards = [11, 2, 3, 4, 5, 6 , 7 ,8 ,9 ,10 ,10 ,10 ,10]
+    card = random.choice(cards)
+    return card
 
-your_cards = [None, None]
-Computer_cards = [None, None]
-def black_Jack(f_cards):
+for _ in range(2):
+    your_cards.append(deal_card())
+    Computer_cards.append(deal_card())
 
-    your_cards[0] = random.choice(f_cards)
-    your_cards[1] = random.choice(f_cards)
-    current_score = your_cards[0] + your_cards[1]
-    print(f"Your cards: {your_cards}, current score: {current_score}")
-
-    Computer_cards[0] = random.choice(f_cards)
-    Computer_cards[1] = random.choice(f_cards)
-    print(f"Computer's first card: {Computer_cards[0]}")
+for _ in range(0 , len(your_cards)):
+    current_score += your_cards[_]
 
 
-black_Jack(cards)
+if current_score > 21:
+    print("Your Lost, Computer Win's")
+
+print(f"Your cards: {your_cards}, current score: {current_score}")
+print(f"Computer's first card: {Computer_cards[0]}")
+
+
+
+
+
+
+
+
+#Blackjack Program Requirements and Game Rules
