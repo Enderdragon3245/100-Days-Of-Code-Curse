@@ -44,3 +44,15 @@ word_per_page == int(input("Number of words per page: ")) #equal to more
 total_words = pages * word_per_page
 print(total_words)
 #Solution: change == for = in word_per_page
+
+#Bringing out the BIG Gun: Using a Debugger
+
+def mutate(a_list):
+    b_list = []
+    for item in a_list:
+        new_item = item * 2
+    b_list.append(new_item) #This Code is not indent correct
+    print(b_list)
+
+mutate([1,2,3,5,8,13])
+#Solution: indentend the b_list.append inside the for loop
