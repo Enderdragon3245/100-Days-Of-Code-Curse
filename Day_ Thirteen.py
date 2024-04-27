@@ -27,3 +27,10 @@ if year > 1980 and year <= 1994: #This code excludes the possibility of the year
 elif year > 1994:  #no if state or elif checks the year 1994
     print("You are a Gen Z.")
 #Solution: =
+
+#Fixing Errors and Watching for Red Underlines
+
+age = input("How old are you?")
+if age > 18:
+    print("You can drive") # "Expect an indeted block"
+#Solution: Indented the block
