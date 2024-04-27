@@ -34,3 +34,13 @@ age = input("How old are you?")
 if age > 18:
     print("You can drive") # "Expect an indeted block"
 #Solution: Indented the block
+
+#Squash bugs with a print() Statement
+
+pages = 0
+word_per_page = 0
+pages = int(input("Number of pages:"))
+word_per_page == int(input("Number of words per page: ")) #equal to more
+total_words = pages * word_per_page
+print(total_words)
+#Solution: change == for = in word_per_page
