@@ -1,0 +1,48 @@
+MENU = {
+    "espresso": {
+        "ingredients": {
+            "water": 50,
+            "coffee": 18,
+        },
+        "cost": 1.5,
+    },
+    "latte": {
+        "ingredients": {
+            "water": 200,
+            "milk": 150,
+            "coffee": 24,
+        },
+        "cost": 2.5,
+    },
+    "cappuccino": {
+        "ingredients": {
+            "water": 250,
+            "milk": 100,
+            "coffee": 24,
+        },
+        "cost": 3.0,
+    }
+}
+resources = {
+    "water": 300,
+    "milk": 200,
+    "coffee": 100,
+    "Money": 0
+}
+
+def Make_Café(Check):
+     return
+
+is_on = True
+while is_on:
+    Check = str(input("What would you like? (espresso/latte/cappuccino):")).lower()
+    if Check == "off":
+         is_on = False
+    elif Check == "report":
+        print(f"Water: {resources['water']}ml")
+        print(f"milk: {resources['milk']}ml")
+        print(f"coffe: {resources['coffee']}g")
+        print(f"Money: ${resources['Money']}")
+
+
+

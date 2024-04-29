@@ -80,6 +80,7 @@ def game():
 
   
     print(logo)
+    
     if is_correct:
       score += 1
       print(f"You're right! Current score: {score}.")
