@@ -23,12 +23,15 @@ MENU = {
         "cost": 3.0,
     }
 }
+profit = 0
 resources = {
     "water": 300,
     "milk": 200,
     "coffee": 100,
-    "Money": 0
 }
+
+def Check_Coins(Check):
+    if 
 
 def Make_Café(Check):
      return
@@ -42,7 +45,10 @@ while is_on:
         print(f"Water: {resources['water']}ml")
         print(f"milk: {resources['milk']}ml")
         print(f"coffe: {resources['coffee']}g")
-        print(f"Money: ${resources['Money']}")
+        print(f"Money: ${profit}")
+    else:
+        order = MENU[Check]
+        
 
 
 
