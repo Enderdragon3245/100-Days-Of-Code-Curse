@@ -29,12 +29,23 @@ resources = {
     "milk": 200,
     "coffee": 100,
 }
+def is_resources_sufficient(order_ingredients):
+    for item in order_ingredients:
+        if order_ingredients[item] > resources[item]:
+            print(f"Sorry, You Wake enough {resources[item]}")
+        return False
+    return True
 
 def Check_Coins(Check):
-    if 
+    if profit > drink["cost"]:
+        return
 
-def Make_Café(Check):
-     return
+def process_coins():
+    total = int(input("How many quarters?: ")) * 0.25
+    total += int(input("How many dimes?: ")) * 0.1
+    total += int(input("How many nickles?: ")) * 0.05
+    total += int(input("How many pennies?: ")) * 0.01
+    return total
 
 is_on = True
 while is_on:
@@ -47,8 +58,9 @@ while is_on:
         print(f"coffe: {resources['coffee']}g")
         print(f"Money: ${profit}")
     else:
-        order = MENU[Check]
-        
-
+        drink = MENU[Check]
+        if is_resources_sufficient(drink["ingredients"]):
+            paymoney = process_coins()
+            
 
 
