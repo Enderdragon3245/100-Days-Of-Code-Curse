@@ -39,14 +39,14 @@ def draw_shape(sides):
 for shape_Side_n in range(3, 11):
     draw_shape(shape_Side_n)
 """
-Position = [90, 180 , 270 , 360]
+Position = [0 , 90 , 180 , 270]
 def Forward_turtle():
     t.pensize(5)
     t.speed(10)
     for ang in range(100):
         t.color(random.choice(colours))
         t.forward(20)
-        t.left(random.choice(Position))
+        t.setheading(random.choice(Position))
         
     
         
