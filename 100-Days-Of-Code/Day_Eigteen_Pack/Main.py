@@ -1,5 +1,5 @@
 from turtle import Turtle, Screen
-
+import random
 
 t = Turtle()
 """
@@ -20,14 +20,16 @@ for ang in range(0 , 10):
 
 """
 
-
-
+colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", 
+           "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
+t.screen.bgcolor("Black")
 
 def draw_shape(sides):
 
     angle = 360 / sides
-
+    random_color = random.choice(colours)
     for ang in range(sides):
+        t.color(random_color)
         t.forward(100)
         t.right(angle)
     
