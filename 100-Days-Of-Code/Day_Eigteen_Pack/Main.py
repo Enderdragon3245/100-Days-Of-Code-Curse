@@ -24,6 +24,7 @@ colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue",
            "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
 t.screen.bgcolor("Black")
 
+"""
 def draw_shape(sides):
 
     angle = 360 / sides
@@ -37,6 +38,20 @@ def draw_shape(sides):
 
 for shape_Side_n in range(3, 11):
     draw_shape(shape_Side_n)
+"""
+Position = [90, 180 , 270 , 360]
+def Forward_turtle():
+    t.pensize(5)
+    t.speed(10)
+    for ang in range(100):
+        t.color(random.choice(colours))
+        t.forward(20)
+        t.left(random.choice(Position))
+        
+    
+        
+
+Forward_turtle()
 
 
 screen = Screen()
