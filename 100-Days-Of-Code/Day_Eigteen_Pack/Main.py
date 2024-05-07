@@ -19,20 +19,23 @@ for ang in range(0 , 10):
     t.forward(10)
 
 """
-sides = 3
-angle = 360
-is_on = True
 
 
-while is_on:
-    for ang in range(0 , sides):
-        result = angle / sides
+
+
+def draw_shape(sides):
+
+    angle = 360 / sides
+
+    for ang in range(sides):
         t.forward(100)
-        t.right(result)
+        t.right(angle)
     
     sides += 1
 
-    
+for shape_Side_n in range(3, 11):
+    draw_shape(shape_Side_n)
+
 
 screen = Screen()
 screen.exitonclick()
