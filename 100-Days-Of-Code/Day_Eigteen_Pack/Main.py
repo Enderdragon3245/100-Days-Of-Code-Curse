@@ -1,7 +1,7 @@
-from turtle import Turtle, Screen
+import turtle as t
 import random
 
-t = Turtle()
+t = t.Turtle()
 """
 t2 = Turtle()
 t2.color("red")
@@ -39,20 +39,26 @@ def draw_shape(sides):
 for shape_Side_n in range(3, 11):
     draw_shape(shape_Side_n)
 """
+t.colormode(255)
+
+def random_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    random_color = (r ,g, b)
+    return random_color
+
 Position = [0 , 90 , 180 , 270]
-def Forward_turtle():
+def Forward_turtle(color):
     t.pensize(5)
     t.speed(10)
     for ang in range(100):
-        t.color(random.choice(colours))
-        t.forward(20)
+        t.color(random_color())
+        t.forward(30)
         t.setheading(random.choice(Position))
         
-    
-        
-
 Forward_turtle()
 
 
-screen = Screen()
+screen = t.Screen()
 screen.exitonclick()
