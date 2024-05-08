@@ -1,5 +1,6 @@
 import turtle as t
 import random
+import colorsys
 
 t = t.Turtle()
 """
@@ -39,6 +40,8 @@ def draw_shape(sides):
 for shape_Side_n in range(3, 11):
     draw_shape(shape_Side_n)
 """
+
+"""
 t.colormode(255)
 
 def random_color():
@@ -58,6 +61,23 @@ def Forward_turtle(color):
         t.setheading(random.choice(Position))
         
 Forward_turtle()
+
+"""
+h = 0
+n = 70
+t.speed(0)
+
+for _ in range(360):
+    c = colorsys.hsv_to_rgb(h ,1 , 0.8)
+    h += 1/n
+    t.color(c)
+    
+    
+    for i in range(2):
+        t.left(2)
+        t.circle(100)
+        
+
 
 
 screen = t.Screen()
